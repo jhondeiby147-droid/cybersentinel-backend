@@ -7,7 +7,7 @@ app = FastAPI(title="CyberSentinel AI API")
 
 # Configuración de CORS
 origins = [
-    "http://localhost:4200", # URL por defecto de Angular
+    "https://cybersentinel-frontend.vercel.app","http://localhost:4200"
 ]
 
 app.add_middleware(
