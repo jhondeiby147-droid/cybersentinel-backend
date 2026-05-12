@@ -22,8 +22,8 @@ RUN pip install uv
 COPY pyproject.toml ./
 # COPY uv.lock ./ 
 
-# 7. Instalar las dependencias usando uv directamente en el entorno del sistema del contenedor
-RUN uv pip install --system -e .
+# 7. Instalar las dependencias leyendo el pyproject.toml directamente
+RUN uv pip install --system -r pyproject.toml
 
 # Si tu pyproject.toml no está configurado como un paquete instalable, usa esta alternativa:
 # RUN uv pip install --system -r pyproject.toml
